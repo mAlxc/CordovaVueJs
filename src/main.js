@@ -7,10 +7,18 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import colors from 'vuetify/es5/util/colors'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    primary: colors.indigo.base,
+    secondary: colors.grey.darken1,
+    accent: colors.shades.black,
+    error: colors.red.accent3
+  }
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

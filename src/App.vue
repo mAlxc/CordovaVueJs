@@ -21,27 +21,7 @@
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex shrink>
-            <v-tooltip right>
-              <v-btn
-                slot="activator"
-                icon
-                large
-                target="_blank"
-              >
-                <v-icon large>code</v-icon>
-              </v-btn>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <v-btn slot="activator" icon large href="https://codepen.io/johnjleider/pen/qxQWda" target="_blank">
-                <v-icon large>mdi-codepen</v-icon>
-              </v-btn>
-              <span>Codepen</span>
-            </v-tooltip>
-          </v-flex>
-        </v-layout>
+        <router-view></router-view>
       </v-container>
     </v-content>
     <v-footer app fixed>
@@ -53,7 +33,7 @@
 <script>
 const menu = [
   {name: 'home', icon: 'home', label: 'Home'},
-  {name: 'about', icon: 'help', label: 'A propos'},
+  {name: 'about', icon: 'help_outline', label: 'A propos'},
   {name: 'config', icon: 'settings', label: 'Configs'}
 ]
 export default {
@@ -78,7 +58,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
